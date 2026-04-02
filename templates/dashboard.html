@@ -1,0 +1,207 @@
+<!DOCTYPE html><html><head>
+<title>SkillBridge Dashboard</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/static/style.css"><style>
+
+/* ===== BACKGROUND ===== */
+
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+background:linear-gradient(-45deg,#667eea,#764ba2,#6b8cff,#8e54e9);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+color:white;
+}
+
+/* Animated gradient */
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px;
+}
+
+/* ===== HEADER ===== */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:35px;
+}
+
+.header h1{
+font-size:32px;
+font-weight:600;
+}
+
+.tagline{
+opacity:0.9;
+}
+
+/* ===== CARD ===== */
+
+.card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(12px);
+padding:28px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+margin-bottom:30px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+/* ===== TEXTAREA ===== */
+
+textarea{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+margin-top:8px;
+font-family:'Poppins';
+resize:none;
+}
+
+/* ===== SELECT ===== */
+
+select{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:none;
+margin-top:5px;
+}
+
+/* ===== BUTTON ===== */
+
+button{
+background:linear-gradient(135deg,#ff7eb3,#ff758c);
+border:none;
+padding:12px 18px;
+border-radius:10px;
+color:white;
+font-weight:500;
+cursor:pointer;
+margin-top:15px;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===== FEATURES GRID ===== */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+/* ===== FEATURE CARD ===== */
+
+.feature-card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:16px;
+text-align:center;
+transition:0.3s;
+cursor:pointer;
+}
+
+.feature-card:hover{
+transform:translateY(-6px) scale(1.03);
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+.feature-card h3{
+margin-bottom:10px;
+}
+
+/* ===== MESSAGE ===== */
+
+#message{
+margin-top:10px;
+font-weight:500;
+color:#00ffcc;
+}
+
+/* ===== SMALL TEXT ===== */
+
+p{
+opacity:0.9;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.header{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
+
+</style></head><body><div class="container"><div class="header">
+<div>
+<h1>🚀 SkillBridge</h1>
+<p class="tagline">Exchange Skills • Learn Together</p>
+</div>
+</div><div class="card"><h3>Skills I Can Teach</h3><textarea id="teachSkills" rows="4" placeholder="Example: Python, Excel, Canva"></textarea><br><label>Skill Level</label>
+<select id="teachLevel">
+
+<option value="Beginner">Beginner</option>
+<option value="Intermediate">Intermediate</option>
+<option value="Advanced">Advanced</option>
+</select><br><br>
+
+<label>Skill Category</label>
+<select id="teachCategory">
+
+<option value="Programming">Programming</option>
+<option value="Design">Design</option>
+<option value="Language">Language</option>
+<option value="Marketing">Marketing</option>
+<option value="Business">Business</option>
+<option value="Other">Other</option>
+</select><br><br>
+
+<h3>Skills I Want To Learn</h3><textarea id="learnSkills" rows="4" placeholder="Example: Java, Public Speaking"></textarea><button id="saveBtn">Save Skills</button>
+
+<p id="message"></p></div><div class="features"><div class="feature-card">
+<h3>🔍 Find Skill Matches</h3>
+<p>Discover users who can exchange skills with you.</p>
+<a href="/matches">
+<button>Explore</button>
+</a>
+</div><div class="feature-card">
+<h3>📩 View Requests</h3>
+<p>Check incoming and outgoing exchange requests.</p>
+<a href="/requests">
+<button>Open</button>
+</a>
+</div><div class="feature-card">
+<h3>👤 My Profile</h3>
+<p>View and manage your learning profile.</p>
+<a href="/profile">
+<button>Open</button>
+</a>
+</div></div></div><script type="module" src="/static/dashboard.js"></script></body></html>

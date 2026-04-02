@@ -1,0 +1,143 @@
+/* GENERAL PAGE */
+
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#fdfdfd;
+color:#444;
+}
+
+/* HEADER */
+
+.header{
+background:#ffffff;
+padding:18px 40px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* TITLES */
+
+h1,h2,h3{
+margin-top:0;
+color:#333;
+}
+
+/* DASHBOARD GRID */
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARDS */
+
+.card{
+background:#ffffff;
+border-radius:12px;
+padding:22px;
+box-shadow:0 6px 16px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* TEXTAREA */
+
+textarea{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:1px solid #e3e3e3;
+font-family:'Poppins';
+resize:none;
+}
+
+/* INPUT */
+
+input{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:1px solid #e3e3e3;
+}
+
+/* SELECT */
+
+select{
+width:100%;
+padding:8px;
+border-radius:6px;
+border:1px solid #e3e3e3;
+margin-top:4px;
+}
+
+/* BUTTON */
+
+button{
+background:#f4a261;
+border:none;
+padding:10px 16px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+font-weight:500;
+transition:0.2s;
+}
+
+button:hover{
+background:#e98b4e;
+}
+
+/* FEATURE BOX */
+
+.feature{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+height:160px;
+}
+
+/* MESSAGE */
+
+#message{
+margin-top:12px;
+color:#2a9d8f;
+font-weight:500;
+}
+
+/* LINKS */
+
+a{
+text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.dashboard{
+grid-template-columns:1fr;
+}
+
+.container{
+padding:20px;
+}
+
+}
